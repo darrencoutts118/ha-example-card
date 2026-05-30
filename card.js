@@ -1,3 +1,7 @@
+if (!customElements.get("ha-data-table")) {
+  await import("/frontend_latest/components/data-table/ha-data-table.js");
+}
+
 /*export const loadHaForm = async () => {
   if (customElements.get("ha-data-table") && customElements.get("ha-slider") && customElements.get("ha-combo-box")) return;
 
@@ -26,7 +30,7 @@ const event = new CustomEvent('ha-request-load-components', {
                     bubbles: true,
                     composed: true
                 });
-                document.dispatchEvent(event);
+                //document.dispatchEvent(event);
 
 class MyDataTableCard extends HTMLElement {
   setConfig(config) {
