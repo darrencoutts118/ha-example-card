@@ -19,6 +19,15 @@ export const loadHaForm = async () => {
 
 loadHaForm();
 
+const event = new CustomEvent('ha-request-load-components', {
+                    detail: {
+                        components: ['ha-data-table']
+                    },
+                    bubbles: true,
+                    composed: true
+                });
+                document.dispatchEvent(event);
+
 class MyDataTableCard extends HTMLElement {
   setConfig(config) {
     this.config = config;
