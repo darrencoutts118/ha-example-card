@@ -42,9 +42,9 @@ class MyDataTableCard extends HTMLElement {
 
             var items;
 
-            hass.callWS({type: 'simple_inventory/list_items', inventory_id: '01KRB3BHY5BZN5W69A07SVT6YW'}).then(e => items = e.items);
-
-            console.log(items);
+            hass.callWS({type: 'simple_inventory/list_items', inventory_id: '01KRB3BHY5BZN5W69A07SVT6YW'}).then((e) => {
+                this.content.data = e.items;
+            });
 
             this.content.addEventListener('row-click', (e) => console.log(e.detail));
 
@@ -88,7 +88,7 @@ class MyDataTableCard extends HTMLElement {
         ];
 
         // Assign data
-        this.content.data = rows;
+        // this.content.data = rows;
     }
 
     getCardSize() {
