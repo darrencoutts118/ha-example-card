@@ -49,6 +49,8 @@ class MyDataTableCard extends HTMLElement {
 
       this.content = this.querySelector("ha-data-table");
 
+      this.content.hass = hass;
+      
       // Define columns
       this.content.columns = [
         {
