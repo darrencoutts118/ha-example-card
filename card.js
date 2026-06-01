@@ -46,7 +46,10 @@ class MyDataTableCard extends HTMLElement {
                 this.content.data = e.items;
             });
 
-            this.content.addEventListener('row-click', (e) => console.log(e.detail));
+            this.content.addEventListener('row-click', (e) => {
+                var dialog = document.createElement('ha-dialog');
+                dialog.open = true;
+            });
 
             // Define columns
             this.content.columns = [
