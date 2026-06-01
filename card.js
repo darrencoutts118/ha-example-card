@@ -1,8 +1,8 @@
 if (!customElements.get("ha-data-table")) {
-  await import("/frontend_latest/components/data-table/ha-data-table.js");
+  //await import("/frontend_latest/components/data-table/ha-data-table.js");
 }
 
-/*export const loadHaForm = async () => {
+export const loadHaForm = async () => {
   if (customElements.get("ha-data-table") && customElements.get("ha-slider") && customElements.get("ha-combo-box")) return;
 
   await customElements.whenDefined("partial-panel-resolver");
@@ -22,7 +22,7 @@ if (!customElements.get("ha-data-table")) {
 }
 
 loadHaForm();
-*/
+
 const event = new CustomEvent('ha-request-load-components', {
                     detail: {
                         components: ['ha-data-table']
