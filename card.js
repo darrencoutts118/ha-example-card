@@ -48,6 +48,7 @@ class MyDataTableCard extends HTMLElement {
 
             this.content.addEventListener('row-click', (e) => {
                 var dialog = document.createElement('ha-dialog');
+                console.log(dialog);
                 dialog.open = true;
             });
 
