@@ -52,21 +52,18 @@ class MyDataTableCard extends HTMLElement {
             this.content.columns = [
                 {
                     title: "Name",
-                    path: "name",
                     sortable: true,
                     template: (entry) => entry.name || "—",
                 },
                 {
-                    title: "State",
-                    path: "state",
-                    sortable: true,
-                    template: (entry) => entry.state || "—",
+                    title: "Quantity",
+                    sortable: false,
+                    template: (entry) => entry.quantity || "—",
                 },
                 {
-                    title: "Last Updated",
-                    path: "updated",
+                    title: "Category",
                     sortable: true,
-                    template: (entry) => entry.updated || "—",
+                    template: (entry) => entry.category || "—",
                 },
             ];
         }
