@@ -38,6 +38,12 @@ class MyDataTableCard extends HTMLElement {
 
             this.content.selectable = true;
 
+            this.content.clickable = true;
+
+            items = $0.hass.callWS({type: 'simple_inventory/list_items', inventory_id: '01KRB3BHY5BZN5W69A07SVT6YW'}).then(e => console.log(e));
+
+            this.content.addEventListener('row-click', (e) => console.log(e.detail));
+
             // Define columns
             this.content.columns = [
                 {
