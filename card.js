@@ -42,7 +42,7 @@ class MyDataTableCard extends HTMLElement {
 
             let items;
 
-            // hass.callWS({type: 'simple_inventory/list_items', inventory_id: '01KRB3BHY5BZN5W69A07SVT6YW'}).then(e => items = e.items);
+            hass.callWS({type: 'simple_inventory/list_items', inventory_id: '01KRB3BHY5BZN5W69A07SVT6YW'}).then(e => items = e.items);
 
             console.log(items);
 
