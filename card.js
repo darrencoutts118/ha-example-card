@@ -57,16 +57,19 @@ class MyDataTableCard extends HTMLElement {
           title: "Name",
           path: "name",
           sortable: true,
+          template: (entry) => entry.name || "—",
         },
         {
           title: "State",
           path: "state",
           sortable: true,
+          template: (entry) => entry.state || "—",
         },
         {
           title: "Last Updated",
           path: "updated",
           sortable: true,
+          template: (entry) => entry.updated || "—",
         },
       ];
     }
